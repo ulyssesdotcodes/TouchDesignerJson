@@ -61,8 +61,7 @@
    "snap": 0,
    "srselect": 1,
    "startunit": 2,
-   "stdswitcher1": 0,
-   "value0": 0.800000011920929
+   "stdswitcher1": 0
   },
   "type": "constantChop"
  },
