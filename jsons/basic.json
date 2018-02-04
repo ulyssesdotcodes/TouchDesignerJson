@@ -1,4 +1,53 @@
 {
+ "/base1": {
+  "connections": [],
+  "parameters": {
+   "enablecloningpulse": 0,
+   "reinitextensions": 0,
+   "reinitnet": 0
+  },
+  "type": "base"
+ },
+ "/base1/out1": {
+  "connections": [
+   "/base1/rectangle1"
+  ],
+  "parameters": {
+   "armenu": 0,
+   "chanmask": 15,
+   "fillmode": 0,
+   "filtertype": 1,
+   "format": 0,
+   "inputfiltertype": 1,
+   "label": "me.name",
+   "outputaspect": 0,
+   "outputresolution": 0,
+   "resmenu": 9,
+   "stdswitcher1": 0
+  },
+  "type": "outTop"
+ },
+ "/base1/rectangle1": {
+  "connections": [],
+  "parameters": {
+   "armenu": 0,
+   "borderwidthunit": 1,
+   "centerunit": 1,
+   "chanmask": 15,
+   "cornerradiusunit": 0,
+   "fillmode": 0,
+   "filtertype": 1,
+   "format": 0,
+   "inputfiltertype": 1,
+   "outputaspect": 0,
+   "outputresolution": 0,
+   "resmenu": 9,
+   "sizeunit": 2,
+   "softnessunit": 2,
+   "stdswitcher1": 0
+  },
+  "type": "rectangleTop"
+ },
  "/constant1": {
   "connections": [],
   "parameters": {
@@ -13,7 +62,7 @@
    "srselect": 1,
    "startunit": 2,
    "stdswitcher1": 0,
-   "value0": 0.8
+   "value0": 0.800000011920929
   },
   "type": "constantChop"
  },
@@ -37,6 +86,25 @@
    "stdswitcher1": 0
   },
   "type": "edges"
+ },
+ "/level1": {
+  "connections": [
+   "/noise1"
+  ],
+  "parameters": {
+   "armenu": 0,
+   "brightness1": 0.14000000059604645,
+   "chanmask": 15,
+   "fillmode": 0,
+   "filtertype": 1,
+   "format": 0,
+   "inputfiltertype": 1,
+   "outputaspect": 0,
+   "outputresolution": 0,
+   "resmenu": 9,
+   "stdswitcher1": 0
+  },
+  "type": "levelTop"
  },
  "/noise1": {
   "connections": [],
