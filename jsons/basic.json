@@ -13,9 +13,30 @@
    "srselect": 1,
    "startunit": 2,
    "stdswitcher1": 0,
-   "value0": 0.2
+   "value0": 0.8
   },
   "type": "constantChop"
+ },
+ "/edge1": {
+  "connections": [
+   "/noise1"
+  ],
+  "parameters": {
+   "alphaoutputmenu": 0,
+   "armenu": 0,
+   "chanmask": 15,
+   "fillmode": 0,
+   "filtertype": 1,
+   "format": 0,
+   "inputfiltertype": 1,
+   "offsetunit": 0,
+   "outputaspect": 0,
+   "outputresolution": 0,
+   "resmenu": 9,
+   "select": 0,
+   "stdswitcher1": 0
+  },
+  "type": "edges"
  },
  "/noise1": {
   "connections": [],
@@ -41,7 +62,7 @@
  },
  "/out1": {
   "connections": [
-   "/noise1"
+   "/edge1"
   ],
   "parameters": {
    "armenu": 0,
