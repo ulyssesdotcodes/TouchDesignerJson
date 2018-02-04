@@ -1,1 +1,79 @@
-{"/noise1": {"type": "noiseTop", "parameters": {"armenu": 0, "format": 1, "inputfiltertype": 1, "xord": 0, "chanmask": 15, "tz": "absTime.seconds * 0.2", "resmenu": 9, "rgb": 2, "stdswitcher1": 0, "rord": 0, "fillmode": 4, "outputaspect": 1, "filtertype": 1, "outputresolution": 0, "type": 4, "alpha": 1}, "connections": []}, "/out1": {"type": "outTop", "parameters": {"stdswitcher1": 0, "label": "me.name", "armenu": 0, "outputaspect": 0, "filtertype": 1, "outputresolution": 0, "resmenu": 9, "format": 0, "inputfiltertype": 1, "chanmask": 15, "fillmode": 0}, "connections": ["/noise1"]}}
+{
+ "/constant1": {
+  "connections": [],
+  "parameters": {
+   "autoexportroot": "parent()",
+   "endunit": 2,
+   "exportmethod": 0,
+   "left": 0,
+   "rate": "me.time.rate",
+   "right": 0,
+   "scope": 0,
+   "snap": 0,
+   "srselect": 1,
+   "startunit": 2,
+   "stdswitcher1": 0,
+   "value0": 0.2
+  },
+  "type": "constantChop"
+ },
+ "/noise1": {
+  "connections": [],
+  "parameters": {
+   "alpha": 1,
+   "armenu": 0,
+   "chanmask": 15,
+   "fillmode": 4,
+   "filtertype": 1,
+   "format": 1,
+   "inputfiltertype": 1,
+   "outputaspect": 1,
+   "outputresolution": 0,
+   "resmenu": 9,
+   "rgb": 2,
+   "rord": 0,
+   "stdswitcher1": 1,
+   "type": 4,
+   "tz": "op('speed1')['chan1']",
+   "xord": 0
+  },
+  "type": "noiseTop"
+ },
+ "/out1": {
+  "connections": [
+   "/noise1"
+  ],
+  "parameters": {
+   "armenu": 0,
+   "chanmask": 15,
+   "fillmode": 0,
+   "filtertype": 1,
+   "format": 0,
+   "inputfiltertype": 1,
+   "label": "me.name",
+   "outputaspect": 0,
+   "outputresolution": 0,
+   "resmenu": 9,
+   "stdswitcher1": 0
+  },
+  "type": "outTop"
+ },
+ "/speed1": {
+  "connections": [
+   "/constant1"
+  ],
+  "parameters": {
+   "autoexportroot": "parent()",
+   "exportmethod": 0,
+   "limittype": 0,
+   "order": 0,
+   "resetcondition": 1,
+   "resetpulse": 0,
+   "scope": 0,
+   "srselect": 1,
+   "stdswitcher1": 0,
+   "timeslice": true
+  },
+  "type": "speedChop"
+ }
+}
