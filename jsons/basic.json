@@ -108,7 +108,7 @@
  },
  "/edge1": {
   "bypass": false,
-  "display": false,
+  "display": true,
   "json_connections": [
    "/noise1"
   ],
@@ -125,7 +125,8 @@
    "outputresolution": 0,
    "resmenu": 9,
    "select": 0,
-   "stdswitcher1": 0
+   "stdswitcher1": 0,
+   "strength": 5.96999979019165
   },
   "json_type": "edgeTOP",
   "nodeX": 1025,
@@ -135,7 +136,7 @@
  },
  "/noise1": {
   "bypass": false,
-  "display": true,
+  "display": false,
   "json_connections": [],
   "json_parameters": {
    "alpha": 1,
@@ -180,7 +181,7 @@
    "timeslice": true
   },
   "json_type": "speedCHOP",
-  "nodeX": 900,
+  "nodeX": 875,
   "nodeY": 300,
   "render": false,
   "tags": []
