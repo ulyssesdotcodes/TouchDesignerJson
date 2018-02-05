@@ -6,12 +6,11 @@
   "json_parameters": {
    "enablecloningpulse": 0,
    "reinitextensions": 0,
-   "reinitnet": 0,
-   "stdswitcher1": 2
+   "reinitnet": 0
   },
   "json_type": "baseCOMP",
-  "nodeX": 625,
-  "nodeY": 350,
+  "nodeX": 800,
+  "nodeY": 475,
   "render": false,
   "tags": []
  },
@@ -26,9 +25,61 @@
    "type": 1
   },
   "json_type": "circleSOP",
-  "nodeX": -175,
+  "nodeX": -250,
   "nodeY": -175,
   "render": true,
+  "tags": []
+ },
+ "/base1/out1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/base1/rectangle1"
+  ],
+  "json_parameters": {
+   "armenu": 0,
+   "chanmask": 15,
+   "fillmode": 0,
+   "filtertype": 1,
+   "format": 0,
+   "inputfiltertype": 1,
+   "label": "me.name",
+   "outputaspect": 0,
+   "outputresolution": 0,
+   "resmenu": 9,
+   "stdswitcher1": 0
+  },
+  "json_type": "outTOP",
+  "nodeX": 200,
+  "nodeY": -250,
+  "render": false,
+  "tags": []
+ },
+ "/base1/rectangle1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "armenu": 0,
+   "borderwidthunit": 1,
+   "centerunit": 1,
+   "chanmask": 15,
+   "cornerradiusunit": 0,
+   "fillmode": 0,
+   "filtertype": 1,
+   "format": 0,
+   "inputfiltertype": 1,
+   "outputaspect": 0,
+   "outputresolution": 0,
+   "resmenu": 9,
+   "sizeunit": 2,
+   "softnessunit": 2,
+   "stdswitcher1": 0
+  },
+  "json_type": "rectangleTOP",
+  "nodeX": 0,
+  "nodeY": -250,
+  "render": false,
   "tags": []
  },
  "/constant1": {
@@ -46,11 +97,11 @@
    "snap": 0,
    "srselect": 1,
    "startunit": 2,
-   "stdswitcher1": 6
+   "stdswitcher1": 0
   },
   "json_type": "constantCHOP",
-  "nodeX": -275,
-  "nodeY": 25,
+  "nodeX": 700,
+  "nodeY": 300,
   "render": false,
   "tags": []
  },
@@ -73,37 +124,12 @@
    "rord": 0,
    "stdswitcher1": 1,
    "type": 4,
-   "tz": "op('/project1/jsoner/network/speed1')[0]",
+   "tz": "op('speed1')['chan1']",
    "xord": 0
   },
   "json_type": "noiseTOP",
-  "nodeX": 500,
-  "nodeY": 50,
-  "render": false,
-  "tags": []
- },
- "/out1": {
-  "bypass": false,
-  "display": false,
-  "json_connections": [
-   "/noise1"
-  ],
-  "json_parameters": {
-   "armenu": 0,
-   "chanmask": 15,
-   "fillmode": 0,
-   "filtertype": 1,
-   "format": 0,
-   "inputfiltertype": 1,
-   "label": "me.name",
-   "outputaspect": 0,
-   "outputresolution": 0,
-   "resmenu": 9,
-   "stdswitcher1": 0
-  },
-  "json_type": "outTOP",
-  "nodeX": 650,
-  "nodeY": 50,
+  "nodeX": 825,
+  "nodeY": 150,
   "render": false,
   "tags": []
  },
@@ -126,32 +152,8 @@
    "timeslice": true
   },
   "json_type": "speedCHOP",
-  "nodeX": 475,
-  "nodeY": 200,
-  "render": false,
-  "tags": []
- },
- "/trail1": {
-  "bypass": false,
-  "display": false,
-  "json_connections": [
-   "/speed1"
-  ],
-  "json_parameters": {
-   "autoexportroot": "parent()",
-   "capture": 0,
-   "exportmethod": 0,
-   "rate": "me.time.rate",
-   "resetpulse": 0,
-   "scope": 0,
-   "srselect": 1,
-   "stdswitcher1": 0,
-   "timeslice": true,
-   "wlengthunit": 2
-  },
-  "json_type": "trailCHOP",
-  "nodeX": 650,
-  "nodeY": 200,
+  "nodeX": 900,
+  "nodeY": 300,
   "render": false,
   "tags": []
  }
