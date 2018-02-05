@@ -97,11 +97,39 @@
    "snap": 0,
    "srselect": 1,
    "startunit": 2,
-   "stdswitcher1": 0
+   "stdswitcher1": 0,
+   "value0": 0.46000000834465027
   },
   "json_type": "constantCHOP",
   "nodeX": 700,
   "nodeY": 300,
+  "render": false,
+  "tags": []
+ },
+ "/edge1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/noise1"
+  ],
+  "json_parameters": {
+   "alphaoutputmenu": 0,
+   "armenu": 0,
+   "chanmask": 15,
+   "fillmode": 0,
+   "filtertype": 1,
+   "format": 0,
+   "inputfiltertype": 1,
+   "offsetunit": 0,
+   "outputaspect": 0,
+   "outputresolution": 0,
+   "resmenu": 9,
+   "select": 0,
+   "stdswitcher1": 0
+  },
+  "json_type": "edgeTOP",
+  "nodeX": 1025,
+  "nodeY": 150,
   "render": false,
   "tags": []
  },
@@ -153,6 +181,30 @@
   },
   "json_type": "speedCHOP",
   "nodeX": 900,
+  "nodeY": 300,
+  "render": false,
+  "tags": []
+ },
+ "/trail1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/speed1"
+  ],
+  "json_parameters": {
+   "autoexportroot": "parent()",
+   "capture": 0,
+   "exportmethod": 0,
+   "rate": "me.time.rate",
+   "resetpulse": 0,
+   "scope": 0,
+   "srselect": 1,
+   "stdswitcher1": 0,
+   "timeslice": true,
+   "wlengthunit": 2
+  },
+  "json_type": "trailCHOP",
+  "nodeX": 1050,
   "nodeY": 300,
   "render": false,
   "tags": []
