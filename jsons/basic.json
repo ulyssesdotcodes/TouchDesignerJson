@@ -1,56 +1,41 @@
 {
  "/base1": {
-  "connections": [],
-  "parameters": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
    "enablecloningpulse": 0,
    "reinitextensions": 0,
-   "reinitnet": 0
+   "reinitnet": 0,
+   "stdswitcher1": 2
   },
-  "type": "base"
+  "json_type": "baseCOMP",
+  "nodeX": 625,
+  "nodeY": 350,
+  "render": false,
+  "tags": []
  },
- "/base1/out1": {
-  "connections": [
-   "/base1/rectangle1"
-  ],
-  "parameters": {
-   "armenu": 0,
-   "chanmask": 15,
-   "fillmode": 0,
-   "filtertype": 1,
-   "format": 0,
-   "inputfiltertype": 1,
-   "label": "me.name",
-   "outputaspect": 0,
-   "outputresolution": 0,
-   "resmenu": 9,
-   "stdswitcher1": 0
+ "/base1/circle1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "arc": 0,
+   "orient": 0,
+   "texture": 1,
+   "type": 1
   },
-  "type": "outTop"
- },
- "/base1/rectangle1": {
-  "connections": [],
-  "parameters": {
-   "armenu": 0,
-   "borderwidthunit": 1,
-   "centerunit": 1,
-   "chanmask": 15,
-   "cornerradiusunit": 0,
-   "fillmode": 0,
-   "filtertype": 1,
-   "format": 0,
-   "inputfiltertype": 1,
-   "outputaspect": 0,
-   "outputresolution": 0,
-   "resmenu": 9,
-   "sizeunit": 2,
-   "softnessunit": 2,
-   "stdswitcher1": 0
-  },
-  "type": "rectangleTop"
+  "json_type": "circleSOP",
+  "nodeX": -175,
+  "nodeY": -175,
+  "render": true,
+  "tags": []
  },
  "/constant1": {
-  "connections": [],
-  "parameters": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
    "autoexportroot": "parent()",
    "endunit": 2,
    "exportmethod": 0,
@@ -61,53 +46,19 @@
    "snap": 0,
    "srselect": 1,
    "startunit": 2,
-   "stdswitcher1": 0
+   "stdswitcher1": 6
   },
-  "type": "constantChop"
- },
- "/edge1": {
-  "connections": [
-   "/noise1"
-  ],
-  "parameters": {
-   "alphaoutputmenu": 0,
-   "armenu": 0,
-   "chanmask": 15,
-   "fillmode": 0,
-   "filtertype": 1,
-   "format": 0,
-   "inputfiltertype": 1,
-   "offsetunit": 0,
-   "outputaspect": 0,
-   "outputresolution": 0,
-   "resmenu": 9,
-   "select": 0,
-   "stdswitcher1": 0
-  },
-  "type": "edges"
- },
- "/level1": {
-  "connections": [
-   "/noise1"
-  ],
-  "parameters": {
-   "armenu": 0,
-   "brightness1": 0.14000000059604645,
-   "chanmask": 15,
-   "fillmode": 0,
-   "filtertype": 1,
-   "format": 0,
-   "inputfiltertype": 1,
-   "outputaspect": 0,
-   "outputresolution": 0,
-   "resmenu": 9,
-   "stdswitcher1": 0
-  },
-  "type": "levelTop"
+  "json_type": "constantCHOP",
+  "nodeX": -275,
+  "nodeY": 25,
+  "render": false,
+  "tags": []
  },
  "/noise1": {
-  "connections": [],
-  "parameters": {
+  "bypass": false,
+  "display": true,
+  "json_connections": [],
+  "json_parameters": {
    "alpha": 1,
    "armenu": 0,
    "chanmask": 15,
@@ -122,16 +73,22 @@
    "rord": 0,
    "stdswitcher1": 1,
    "type": 4,
-   "tz": "op('speed1')['chan1']",
+   "tz": "op('/project1/jsoner/network/speed1')[0]",
    "xord": 0
   },
-  "type": "noiseTop"
+  "json_type": "noiseTOP",
+  "nodeX": 500,
+  "nodeY": 50,
+  "render": false,
+  "tags": []
  },
  "/out1": {
-  "connections": [
-   "/edge1"
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/noise1"
   ],
-  "parameters": {
+  "json_parameters": {
    "armenu": 0,
    "chanmask": 15,
    "fillmode": 0,
@@ -144,13 +101,19 @@
    "resmenu": 9,
    "stdswitcher1": 0
   },
-  "type": "outTop"
+  "json_type": "outTOP",
+  "nodeX": 650,
+  "nodeY": 50,
+  "render": false,
+  "tags": []
  },
  "/speed1": {
-  "connections": [
+  "bypass": false,
+  "display": false,
+  "json_connections": [
    "/constant1"
   ],
-  "parameters": {
+  "json_parameters": {
    "autoexportroot": "parent()",
    "exportmethod": 0,
    "limittype": 0,
@@ -162,6 +125,34 @@
    "stdswitcher1": 0,
    "timeslice": true
   },
-  "type": "speedChop"
+  "json_type": "speedCHOP",
+  "nodeX": 475,
+  "nodeY": 200,
+  "render": false,
+  "tags": []
+ },
+ "/trail1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/speed1"
+  ],
+  "json_parameters": {
+   "autoexportroot": "parent()",
+   "capture": 0,
+   "exportmethod": 0,
+   "rate": "me.time.rate",
+   "resetpulse": 0,
+   "scope": 0,
+   "srselect": 1,
+   "stdswitcher1": 0,
+   "timeslice": true,
+   "wlengthunit": 2
+  },
+  "json_type": "trailCHOP",
+  "nodeX": 650,
+  "nodeY": 200,
+  "render": false,
+  "tags": []
  }
 }
