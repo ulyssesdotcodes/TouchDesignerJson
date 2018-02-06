@@ -1,0 +1,213 @@
+{
+ "/base1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "enablecloningpulse": 0,
+   "reinitextensions": 0,
+   "reinitnet": 0
+  },
+  "json_type": "baseCOMP",
+  "nodeX": 800,
+  "nodeY": 475,
+  "render": false,
+  "tags": []
+ },
+ "/base1/circle1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "arc": 0,
+   "orient": 0,
+   "texture": 1,
+   "type": 1
+  },
+  "json_type": "circleSOP",
+  "nodeX": -250,
+  "nodeY": -175,
+  "render": true,
+  "tags": []
+ },
+ "/base1/out1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/base1/rectangle1"
+  ],
+  "json_parameters": {
+   "armenu": 0,
+   "chanmask": 15,
+   "fillmode": 0,
+   "filtertype": 1,
+   "format": 0,
+   "inputfiltertype": 1,
+   "label": "me.name",
+   "outputaspect": 0,
+   "outputresolution": 0,
+   "resmenu": 9,
+   "stdswitcher1": 0
+  },
+  "json_type": "outTOP",
+  "nodeX": 200,
+  "nodeY": -250,
+  "render": false,
+  "tags": []
+ },
+ "/base1/rectangle1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "armenu": 0,
+   "borderwidthunit": 1,
+   "centerunit": 1,
+   "chanmask": 15,
+   "cornerradiusunit": 0,
+   "fillmode": 0,
+   "filtertype": 1,
+   "format": 0,
+   "inputfiltertype": 1,
+   "outputaspect": 0,
+   "outputresolution": 0,
+   "resmenu": 9,
+   "sizeunit": 2,
+   "softnessunit": 2,
+   "stdswitcher1": 0
+  },
+  "json_type": "rectangleTOP",
+  "nodeX": 0,
+  "nodeY": -250,
+  "render": false,
+  "tags": []
+ },
+ "/constant1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "autoexportroot": "parent()",
+   "endunit": 2,
+   "exportmethod": 0,
+   "left": 0,
+   "rate": "me.time.rate",
+   "right": 0,
+   "scope": 0,
+   "snap": 0,
+   "srselect": 1,
+   "startunit": 2,
+   "stdswitcher1": 0,
+   "value0": 0.46000000834465027
+  },
+  "json_type": "constantCHOP",
+  "nodeX": 700,
+  "nodeY": 300,
+  "render": false,
+  "tags": []
+ },
+ "/edge1": {
+  "bypass": false,
+  "display": true,
+  "json_connections": [
+   "/noise1"
+  ],
+  "json_parameters": {
+   "alphaoutputmenu": 0,
+   "armenu": 0,
+   "chanmask": 15,
+   "fillmode": 0,
+   "filtertype": 1,
+   "format": 0,
+   "inputfiltertype": 1,
+   "offsetunit": 0,
+   "outputaspect": 0,
+   "outputresolution": 0,
+   "resmenu": 9,
+   "select": 0,
+   "stdswitcher1": 0,
+   "strength": 5.96999979019165
+  },
+  "json_type": "edgeTOP",
+  "nodeX": 1025,
+  "nodeY": 150,
+  "render": false,
+  "tags": []
+ },
+ "/noise1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "alpha": 1,
+   "armenu": 0,
+   "chanmask": 15,
+   "fillmode": 4,
+   "filtertype": 1,
+   "format": 1,
+   "inputfiltertype": 1,
+   "outputaspect": 1,
+   "outputresolution": 0,
+   "resmenu": 9,
+   "rgb": 2,
+   "rord": 0,
+   "stdswitcher1": 1,
+   "type": 4,
+   "tz": "op('speed1')['chan1']",
+   "xord": 0
+  },
+  "json_type": "noiseTOP",
+  "nodeX": 825,
+  "nodeY": 150,
+  "render": false,
+  "tags": []
+ },
+ "/speed1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/constant1"
+  ],
+  "json_parameters": {
+   "autoexportroot": "parent()",
+   "exportmethod": 0,
+   "limittype": 0,
+   "order": 0,
+   "resetcondition": 1,
+   "resetpulse": 0,
+   "scope": 0,
+   "srselect": 1,
+   "stdswitcher1": 0,
+   "timeslice": true
+  },
+  "json_type": "speedCHOP",
+  "nodeX": 875,
+  "nodeY": 300,
+  "render": false,
+  "tags": []
+ },
+ "/trail1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/speed1"
+  ],
+  "json_parameters": {
+   "autoexportroot": "parent()",
+   "capture": 0,
+   "exportmethod": 0,
+   "rate": "me.time.rate",
+   "resetpulse": 0,
+   "scope": 0,
+   "srselect": 1,
+   "stdswitcher1": 0,
+   "timeslice": true,
+   "wlengthunit": 2
+  },
+  "json_type": "trailCHOP",
+  "nodeX": 1050,
+  "nodeY": 300,
+  "render": false,
+  "tags": []
+ }
+}
