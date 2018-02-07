@@ -1241,6 +1241,123 @@
   "render": false,
   "tags": []
  },
+ "/timer1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "autoexportroot": {
+    "mode": "expression",
+    "value": "parent()"
+   },
+   "callbacks": {
+    "mode": "constant",
+    "value": "timer1_callbacks"
+   },
+   "cuepulse": {
+    "mode": "constant",
+    "value": 0
+   },
+   "cueunits": {
+    "mode": "constant",
+    "value": 3
+   },
+   "cycle": {
+    "mode": "constant",
+    "value": true
+   },
+   "delayunits": {
+    "mode": "constant",
+    "value": 2
+   },
+   "exitendcycle": {
+    "mode": "constant",
+    "value": 0
+   },
+   "exportmethod": {
+    "mode": "constant",
+    "value": "datname"
+   },
+   "gotodone": {
+    "mode": "constant",
+    "value": 0
+   },
+   "gotoendcycle": {
+    "mode": "constant",
+    "value": 0
+   },
+   "gotonextseg": {
+    "mode": "constant",
+    "value": 0
+   },
+   "gotoprevseg": {
+    "mode": "constant",
+    "value": 0
+   },
+   "initialize": {
+    "mode": "constant",
+    "value": 0
+   },
+   "lengthunits": {
+    "mode": "constant",
+    "value": 2
+   },
+   "notifyunits": {
+    "mode": "constant",
+    "value": 2
+   },
+   "rate": {
+    "mode": "expression",
+    "value": "me.time.rate"
+   },
+   "start": {
+    "mode": "constant",
+    "value": 0
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   },
+   "timeslice": {
+    "mode": "constant",
+    "value": true
+   }
+  },
+  "json_type": "timerCHOP",
+  "nodeX": 1000,
+  "nodeY": 450,
+  "render": false,
+  "tags": []
+ },
+ "/timer1_callbacks": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "edit": {
+    "mode": "constant",
+    "value": 0
+   },
+   "loadonstartpulse": {
+    "mode": "constant",
+    "value": 0
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   },
+   "writepulse": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "textDAT",
+  "nodeX": 1000,
+  "nodeY": 330,
+  "render": false,
+  "tags": [],
+  "text": "# me - this DAT.\n# timerOp - the connected Timer CHOP\n# cycle - the cycle index\n# segment - the segment index\n# fraction - the time in fractional form\n#\n# interrupt - True if the user initiated a premature\n# interrupt, False if a result of a normal timeout.\n#\n# onInitialize(): if return value > 0, it will be\n# called again after the returned number of frames.\n\ndef onInitialize(timerOp):\n\treturn 0\n\ndef onReady(timerOp):\n\treturn\n\t\ndef onStart(timerOp):\n\treturn\n\t\ndef onTimerPulse(timerOp, segment):\n\treturn\n\ndef whileTimerActive(timerOp, segment, cycle, fraction):\n\treturn\n\ndef onSegmentEnter(timerOp, segment, interrupt):\n\treturn\n\t\ndef onSegmentExit(timerOp, segment, interrupt):\n\treturn\n\ndef onCycleStart(timerOp, segment, cycle):\n\treturn\n\ndef onCycleEndAlert(timerOp, segment, cycle, alertSegment, alertDone, interrupt):\n\treturn\n\t\ndef onCycle(timerOp, segment, cycle):\n\treturn\n\ndef onDone(timerOp, segment, interrupt):\n\treturn\n\t"
+ },
  "/trail1": {
   "bypass": false,
   "display": false,

@@ -4,9 +4,18 @@
   "display": false,
   "json_connections": [],
   "json_parameters": {
-   "enablecloningpulse": 0,
-   "reinitextensions": 0,
-   "reinitnet": 0
+   "enablecloningpulse": {
+    "mode": "constant",
+    "value": 0
+   },
+   "reinitextensions": {
+    "mode": "constant",
+    "value": 0
+   },
+   "reinitnet": {
+    "mode": "constant",
+    "value": 0
+   }
   },
   "json_type": "baseCOMP",
   "nodeX": 800,
@@ -18,12 +27,7 @@
   "bypass": false,
   "display": false,
   "json_connections": [],
-  "json_parameters": {
-   "arc": 0,
-   "orient": 0,
-   "texture": 1,
-   "type": 1
-  },
+  "json_parameters": {},
   "json_type": "circleSOP",
   "nodeX": -250,
   "nodeY": -175,
@@ -37,17 +41,26 @@
    "/base1/rectangle1"
   ],
   "json_parameters": {
-   "armenu": 0,
-   "chanmask": 15,
-   "fillmode": 0,
-   "filtertype": 1,
-   "format": 0,
-   "inputfiltertype": 1,
-   "label": "me.name",
-   "outputaspect": 0,
-   "outputresolution": 0,
-   "resmenu": 9,
-   "stdswitcher1": 0
+   "armenu": {
+    "mode": "constant",
+    "value": 0
+   },
+   "fillmode": {
+    "mode": "constant",
+    "value": "useinput"
+   },
+   "label": {
+    "mode": "expression",
+    "value": "me.name"
+   },
+   "resmenu": {
+    "mode": "constant",
+    "value": 9
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   }
   },
   "json_type": "outTOP",
   "nodeX": 200,
@@ -60,25 +73,137 @@
   "display": false,
   "json_connections": [],
   "json_parameters": {
-   "armenu": 0,
-   "borderwidthunit": 1,
-   "centerunit": 1,
-   "chanmask": 15,
-   "cornerradiusunit": 0,
-   "fillmode": 0,
-   "filtertype": 1,
-   "format": 0,
-   "inputfiltertype": 1,
-   "outputaspect": 0,
-   "outputresolution": 0,
-   "resmenu": 9,
-   "sizeunit": 2,
-   "softnessunit": 2,
-   "stdswitcher1": 0
+   "armenu": {
+    "mode": "constant",
+    "value": 0
+   },
+   "borderwidthunit": {
+    "mode": "constant",
+    "value": 1
+   },
+   "centerunit": {
+    "mode": "constant",
+    "value": 1
+   },
+   "cornerradiusunit": {
+    "mode": "constant",
+    "value": 0
+   },
+   "fillmode": {
+    "mode": "constant",
+    "value": "useinput"
+   },
+   "resmenu": {
+    "mode": "constant",
+    "value": 9
+   },
+   "sizeunit": {
+    "mode": "constant",
+    "value": 2
+   },
+   "softnessunit": {
+    "mode": "constant",
+    "value": 2
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   }
   },
   "json_type": "rectangleTOP",
   "nodeX": 0,
   "nodeY": -250,
+  "render": false,
+  "tags": []
+ },
+ "/circle1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "armenu": {
+    "mode": "constant",
+    "value": 0
+   },
+   "borderwidthunit": {
+    "mode": "constant",
+    "value": 1
+   },
+   "centerunit": {
+    "mode": "constant",
+    "value": 1
+   },
+   "fillmode": {
+    "mode": "constant",
+    "value": "useinput"
+   },
+   "radiusunit": {
+    "mode": "constant",
+    "value": 2
+   },
+   "resmenu": {
+    "mode": "constant",
+    "value": 9
+   },
+   "softnessunit": {
+    "mode": "constant",
+    "value": 2
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "circleTOP",
+  "nodeX": 1250,
+  "nodeY": 50,
+  "render": false,
+  "tags": []
+ },
+ "/comp1": {
+  "bypass": false,
+  "display": true,
+  "json_connections": [
+   "/level1",
+   "/matte1"
+  ],
+  "json_parameters": {
+   "armenu": {
+    "mode": "constant",
+    "value": 0
+   },
+   "fillmode": {
+    "mode": "constant",
+    "value": "useinput"
+   },
+   "operand": {
+    "mode": "constant",
+    "value": "add"
+   },
+   "punit": {
+    "mode": "constant",
+    "value": 1
+   },
+   "resmenu": {
+    "mode": "constant",
+    "value": 9
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   },
+   "tstepunit": {
+    "mode": "constant",
+    "value": 1
+   },
+   "tunit": {
+    "mode": "constant",
+    "value": 1
+   }
+  },
+  "json_type": "compositeTOP",
+  "nodeX": 2075,
+  "nodeY": 75,
   "render": false,
   "tags": []
  },
@@ -87,18 +212,34 @@
   "display": false,
   "json_connections": [],
   "json_parameters": {
-   "autoexportroot": "parent()",
-   "endunit": 2,
-   "exportmethod": 0,
-   "left": 0,
-   "rate": "me.time.rate",
-   "right": 0,
-   "scope": 0,
-   "snap": 0,
-   "srselect": 1,
-   "startunit": 2,
-   "stdswitcher1": 0,
-   "value0": 0.46000000834465027
+   "autoexportroot": {
+    "mode": "expression",
+    "value": "parent()"
+   },
+   "endunit": {
+    "mode": "constant",
+    "value": 2
+   },
+   "rate": {
+    "mode": "expression",
+    "value": "me.time.rate"
+   },
+   "snap": {
+    "mode": "constant",
+    "value": 0
+   },
+   "startunit": {
+    "mode": "constant",
+    "value": 2
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   },
+   "value0": {
+    "mode": "constant",
+    "value": 0.46000000834465027
+   }
   },
   "json_type": "constantCHOP",
   "nodeX": 700,
@@ -108,28 +249,234 @@
  },
  "/edge1": {
   "bypass": false,
-  "display": true,
+  "display": false,
   "json_connections": [
    "/noise1"
   ],
   "json_parameters": {
-   "alphaoutputmenu": 0,
-   "armenu": 0,
-   "chanmask": 15,
-   "fillmode": 0,
-   "filtertype": 1,
-   "format": 0,
-   "inputfiltertype": 1,
-   "offsetunit": 0,
-   "outputaspect": 0,
-   "outputresolution": 0,
-   "resmenu": 9,
-   "select": 0,
-   "stdswitcher1": 0,
-   "strength": 5.96999979019165
+   "armenu": {
+    "mode": "constant",
+    "value": 0
+   },
+   "fillmode": {
+    "mode": "constant",
+    "value": "useinput"
+   },
+   "offsetunit": {
+    "mode": "constant",
+    "value": 0
+   },
+   "resmenu": {
+    "mode": "constant",
+    "value": 9
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   },
+   "strength": {
+    "mode": "constant",
+    "value": 0.8899999856948853
+   }
   },
   "json_type": "edgeTOP",
   "nodeX": 1025,
+  "nodeY": 150,
+  "render": false,
+  "tags": []
+ },
+ "/feedback1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/matte1"
+  ],
+  "json_parameters": {
+   "armenu": {
+    "mode": "constant",
+    "value": 0
+   },
+   "fillmode": {
+    "mode": "constant",
+    "value": "useinput"
+   },
+   "resetpulse": {
+    "mode": "constant",
+    "value": 0
+   },
+   "resmenu": {
+    "mode": "constant",
+    "value": 9
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   },
+   "top": {
+    "mode": "constant",
+    "value": "comp1"
+   }
+  },
+  "json_type": "feedbackTOP",
+  "nodeX": 1700,
+  "nodeY": -50,
+  "render": false,
+  "tags": []
+ },
+ "/fit1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/edge1"
+  ],
+  "json_parameters": {
+   "armenu": {
+    "mode": "constant",
+    "value": 0
+   },
+   "fillmode": {
+    "mode": "constant",
+    "value": "useinput"
+   },
+   "outputaspect": {
+    "mode": "constant",
+    "value": "resolution"
+   },
+   "outputresolution": {
+    "mode": "constant",
+    "value": "custom"
+   },
+   "punit": {
+    "mode": "constant",
+    "value": 1
+   },
+   "resmenu": {
+    "mode": "constant",
+    "value": 9
+   },
+   "resolutionh": {
+    "mode": "constant",
+    "value": 1000
+   },
+   "resolutionw": {
+    "mode": "constant",
+    "value": 1000
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   },
+   "tunit": {
+    "mode": "constant",
+    "value": 1
+   }
+  },
+  "json_type": "fitTOP",
+  "nodeX": 1250,
+  "nodeY": 175,
+  "render": false,
+  "tags": []
+ },
+ "/level1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/feedback1"
+  ],
+  "json_parameters": {
+   "armenu": {
+    "mode": "constant",
+    "value": 0
+   },
+   "fillmode": {
+    "mode": "constant",
+    "value": "useinput"
+   },
+   "opacity": {
+    "mode": "constant",
+    "value": 0.9700000286102295
+   },
+   "resmenu": {
+    "mode": "constant",
+    "value": 9
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 4
+   }
+  },
+  "json_type": "levelTOP",
+  "nodeX": 1875,
+  "nodeY": -50,
+  "render": false,
+  "tags": []
+ },
+ "/level2": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/fit1"
+  ],
+  "json_parameters": {
+   "armenu": {
+    "mode": "constant",
+    "value": 0
+   },
+   "brightness1": {
+    "mode": "constant",
+    "value": 0.18000000715255737
+   },
+   "fillmode": {
+    "mode": "constant",
+    "value": "useinput"
+   },
+   "resmenu": {
+    "mode": "constant",
+    "value": 9
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "levelTOP",
+  "nodeX": 1350,
+  "nodeY": 325,
+  "render": false,
+  "tags": []
+ },
+ "/matte1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/level2",
+   "/circle1",
+   "/ramp1"
+  ],
+  "json_parameters": {
+   "armenu": {
+    "mode": "constant",
+    "value": 0
+   },
+   "fillmode": {
+    "mode": "constant",
+    "value": "useinput"
+   },
+   "mattechannel": {
+    "mode": "constant",
+    "value": "rgbaverage"
+   },
+   "resmenu": {
+    "mode": "constant",
+    "value": 9
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "matteTOP",
+  "nodeX": 1475,
   "nodeY": 150,
   "render": false,
   "tags": []
@@ -139,28 +486,85 @@
   "display": false,
   "json_connections": [],
   "json_parameters": {
-   "alpha": 1,
-   "armenu": 0,
-   "chanmask": 15,
-   "fillmode": 4,
-   "filtertype": 1,
-   "format": 1,
-   "inputfiltertype": 1,
-   "outputaspect": 1,
-   "outputresolution": 0,
-   "resmenu": 9,
-   "rgb": 2,
-   "rord": 0,
-   "stdswitcher1": 1,
-   "type": 4,
-   "tz": "op('speed1')['chan1']",
-   "xord": 0
+   "armenu": {
+    "mode": "constant",
+    "value": 0
+   },
+   "resmenu": {
+    "mode": "constant",
+    "value": 9
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 1
+   },
+   "tz": {
+    "mode": "expression",
+    "value": "op('speed1')['chan1']"
+   }
   },
   "json_type": "noiseTOP",
   "nodeX": 825,
   "nodeY": 150,
   "render": false,
   "tags": []
+ },
+ "/ramp1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "armenu": {
+    "mode": "constant",
+    "value": 0
+   },
+   "dat": {
+    "mode": "constant",
+    "value": "ramp1_keys1"
+   },
+   "resmenu": {
+    "mode": "constant",
+    "value": 9
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "rampTOP",
+  "nodeX": 1250,
+  "nodeY": -75,
+  "render": false,
+  "tags": []
+ },
+ "/ramp1_keys1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "edit": {
+    "mode": "constant",
+    "value": 0
+   },
+   "loadonstartpulse": {
+    "mode": "constant",
+    "value": 0
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   },
+   "writepulse": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "tableDAT",
+  "nodeX": 1250,
+  "nodeY": -200,
+  "render": false,
+  "tags": [],
+  "text": "pos\tr\tg\tb\ta\r\n0\t0\t0\t0\t1\r\n1\t1\t1\t1\t1\r\n"
  },
  "/speed1": {
   "bypass": false,
@@ -169,16 +573,22 @@
    "/constant1"
   ],
   "json_parameters": {
-   "autoexportroot": "parent()",
-   "exportmethod": 0,
-   "limittype": 0,
-   "order": 0,
-   "resetcondition": 1,
-   "resetpulse": 0,
-   "scope": 0,
-   "srselect": 1,
-   "stdswitcher1": 0,
-   "timeslice": true
+   "autoexportroot": {
+    "mode": "expression",
+    "value": "parent()"
+   },
+   "resetpulse": {
+    "mode": "constant",
+    "value": 0
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   },
+   "timeslice": {
+    "mode": "constant",
+    "value": true
+   }
   },
   "json_type": "speedCHOP",
   "nodeX": 875,
@@ -193,16 +603,30 @@
    "/speed1"
   ],
   "json_parameters": {
-   "autoexportroot": "parent()",
-   "capture": 0,
-   "exportmethod": 0,
-   "rate": "me.time.rate",
-   "resetpulse": 0,
-   "scope": 0,
-   "srselect": 1,
-   "stdswitcher1": 0,
-   "timeslice": true,
-   "wlengthunit": 2
+   "autoexportroot": {
+    "mode": "expression",
+    "value": "parent()"
+   },
+   "rate": {
+    "mode": "expression",
+    "value": "me.time.rate"
+   },
+   "resetpulse": {
+    "mode": "constant",
+    "value": 0
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   },
+   "timeslice": {
+    "mode": "constant",
+    "value": true
+   },
+   "wlengthunit": {
+    "mode": "constant",
+    "value": 2
+   }
   },
   "json_type": "trailCHOP",
   "nodeX": 1050,
