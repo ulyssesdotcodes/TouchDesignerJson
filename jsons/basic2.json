@@ -285,22 +285,6 @@
   "render": false,
   "tags": []
  },
- "/geo1/torus1": {
-  "bypass": false,
-  "display": true,
-  "json_connections": [],
-  "json_parameters": {
-   "stdswitcher1": {
-    "mode": "constant",
-    "value": 0
-   }
-  },
-  "json_type": "torusSOP",
-  "nodeX": 0,
-  "nodeY": 0,
-  "render": true,
-  "tags": []
- },
  "/geo1/transform1": {
   "bypass": false,
   "display": false,
