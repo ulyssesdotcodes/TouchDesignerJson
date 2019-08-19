@@ -55,17 +55,17 @@
   "render": true,
   "tags": []
  },
- "/geo1/torus1": {
+ "/geo1/circle1": {
   "bypass": false,
   "display": true,
   "json_connections": [],
   "json_parameters": {
-   "stdswitcher1": {
+   "stdswitcher": {
     "mode": "constant",
     "value": 0
    }
   },
-  "json_type": "torusSOP",
+  "json_type": "circleSOP",
   "nodeX": 0,
   "nodeY": 0,
   "render": true,
