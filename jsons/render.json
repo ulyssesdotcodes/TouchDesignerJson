@@ -1,0 +1,915 @@
+{
+ "/cam1": {
+  "bypass": false,
+  "display": true,
+  "json_connections": [],
+  "json_parameters": {
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   },
+   "tz": {
+    "mode": "constant",
+    "value": 5.0
+   }
+  },
+  "json_type": "cameraCOMP",
+  "nodeX": 725,
+  "nodeY": 100,
+  "render": false,
+  "tags": []
+ },
+ "/cam1/file1": {
+  "bypass": false,
+  "display": true,
+  "json_connections": [],
+  "json_parameters": {
+   "file": {
+    "mode": "expression",
+    "value": "app.samplesFolder + '/Geo/defcam.geo'"
+   },
+   "stdswitcher": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "fileinSOP",
+  "nodeX": 0,
+  "nodeY": 0,
+  "render": false,
+  "tags": []
+ },
+ "/geo1": {
+  "bypass": false,
+  "display": true,
+  "json_connections": [],
+  "json_parameters": {
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "geometryCOMP",
+  "nodeX": 725,
+  "nodeY": 250,
+  "render": true,
+  "tags": []
+ },
+ "/geo1/torus1": {
+  "bypass": false,
+  "display": true,
+  "json_connections": [],
+  "json_parameters": {
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "torusSOP",
+  "nodeX": 0,
+  "nodeY": 0,
+  "render": true,
+  "tags": []
+ },
+ "/light1": {
+  "bypass": false,
+  "display": true,
+  "json_connections": [],
+  "json_parameters": {
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   },
+   "tz": {
+    "mode": "constant",
+    "value": 10.0
+   }
+  },
+  "json_type": "lightCOMP",
+  "nodeX": 725,
+  "nodeY": -75,
+  "render": false,
+  "tags": []
+ },
+ "/light1/add1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   },
+   "usept0": {
+    "mode": "constant",
+    "value": true
+   }
+  },
+  "json_type": "addSOP",
+  "nodeX": 477,
+  "nodeY": -583,
+  "render": false,
+  "tags": []
+ },
+ "/light1/circle1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "arc": {
+    "mode": "constant",
+    "value": "openarc"
+   },
+   "radx": {
+    "mode": "expression",
+    "value": "mod.math.sin(mod.math.radians(parent().par.coneangle/2)) + \tmod.math.sin(mod.math.radians(parent().par.conedelta/2))"
+   },
+   "rady": {
+    "mode": "expression",
+    "value": "mod.math.sin(mod.math.radians(parent().par.coneangle/2)) + \tmod.math.sin(mod.math.radians(parent().par.conedelta/2))"
+   },
+   "stdswitcher": {
+    "mode": "constant",
+    "value": 0
+   },
+   "tz": {
+    "mode": "expression",
+    "value": "-op('tube1').par.height"
+   }
+  },
+  "json_type": "circleSOP",
+  "nodeX": 266,
+  "nodeY": -82,
+  "render": false,
+  "tags": []
+ },
+ "/light1/circle2": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "arc": {
+    "mode": "constant",
+    "value": "openarc"
+   },
+   "radx": {
+    "mode": "expression",
+    "value": "mod.math.sin(mod.math.radians(parent().par.coneangle/2))"
+   },
+   "rady": {
+    "mode": "expression",
+    "value": "mod.math.sin(mod.math.radians(parent().par.coneangle/2))"
+   },
+   "stdswitcher": {
+    "mode": "constant",
+    "value": 0
+   },
+   "tz": {
+    "mode": "expression",
+    "value": "-op('tube1').par.height"
+   }
+  },
+  "json_type": "circleSOP",
+  "nodeX": 266,
+  "nodeY": -172,
+  "render": false,
+  "tags": []
+ },
+ "/light1/circle3": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "radx": {
+    "mode": "constant",
+    "value": 0.10000000149011612
+   },
+   "rady": {
+    "mode": "constant",
+    "value": 0.10000000149011612
+   },
+   "stdswitcher": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "circleSOP",
+  "nodeX": 81,
+  "nodeY": -692,
+  "render": false,
+  "tags": []
+ },
+ "/light1/circle4": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "arc": {
+    "mode": "constant",
+    "value": "openarc"
+   },
+   "radx": {
+    "mode": "expression",
+    "value": "parent().par.attenuationend"
+   },
+   "rady": {
+    "mode": "expression",
+    "value": "parent().par.attenuationend"
+   },
+   "stdswitcher": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "circleSOP",
+  "nodeX": 730,
+  "nodeY": -646,
+  "render": false,
+  "tags": []
+ },
+ "/light1/circle5": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "arc": {
+    "mode": "constant",
+    "value": "openarc"
+   },
+   "radx": {
+    "mode": "expression",
+    "value": "parent().par.attenuationstart"
+   },
+   "rady": {
+    "mode": "expression",
+    "value": "parent().par.attenuationstart"
+   },
+   "stdswitcher": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "circleSOP",
+  "nodeX": 730,
+  "nodeY": -730,
+  "render": false,
+  "tags": []
+ },
+ "/light1/copy1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/light1/merge6"
+  ],
+  "json_parameters": {
+   "copyg": {
+    "mode": "expression",
+    "value": "'copyGroup' + str(me.copyIndex)"
+   },
+   "ncy": {
+    "mode": "constant",
+    "value": 2
+   },
+   "rx": {
+    "mode": "constant",
+    "value": 90.0
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "copySOP",
+  "nodeX": 1002,
+  "nodeY": -689,
+  "render": false,
+  "tags": []
+ },
+ "/light1/cross1": {
+  "bypass": false,
+  "display": true,
+  "json_connections": [],
+  "json_parameters": {
+   "file": {
+    "mode": "expression",
+    "value": "app.samplesFolder + '/Geo/defnull.geo'"
+   },
+   "stdswitcher": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "fileinSOP",
+  "nodeX": 902,
+  "nodeY": -216,
+  "render": false,
+  "tags": []
+ },
+ "/light1/grid1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "cols": {
+    "mode": "constant",
+    "value": 2
+   },
+   "rows": {
+    "mode": "constant",
+    "value": 2
+   },
+   "sizex": {
+    "mode": "constant",
+    "value": 0.019999999552965164
+   },
+   "sizey": {
+    "mode": "constant",
+    "value": 0.5
+   },
+   "stdswitcher": {
+    "mode": "constant",
+    "value": 0
+   },
+   "ty": {
+    "mode": "constant",
+    "value": 0.25
+   },
+   "type": {
+    "mode": "constant",
+    "value": "poly"
+   }
+  },
+  "json_type": "gridSOP",
+  "nodeX": 590,
+  "nodeY": 59,
+  "render": false,
+  "tags": []
+ },
+ "/light1/line1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "pbx": {
+    "mode": "expression",
+    "value": "mod.math.sin(mod.math.radians(parent().par.coneangle/2)) + \tmod.math.sin(mod.math.radians(parent().par.conedelta/2))"
+   },
+   "pbz": {
+    "mode": "expression",
+    "value": "-op('tube1').par.height"
+   },
+   "stdswitcher": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "lineSOP",
+  "nodeX": 268,
+  "nodeY": -269,
+  "render": false,
+  "tags": []
+ },
+ "/light1/line2": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "pbx": {
+    "mode": "expression",
+    "value": "mod.math.sin(-mod.math.radians(parent().par.coneangle/2)) - \tmod.math.sin(mod.math.radians(parent().par.conedelta/2))"
+   },
+   "pbz": {
+    "mode": "expression",
+    "value": "-op('tube1').par.height"
+   },
+   "stdswitcher": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "lineSOP",
+  "nodeX": 268,
+  "nodeY": -359,
+  "render": false,
+  "tags": []
+ },
+ "/light1/line3": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "pbx": {
+    "mode": "expression",
+    "value": "-mod.math.sin(-mod.math.radians(parent().par.coneangle/2)) + \tmod.math.sin(mod.math.radians(parent().par.conedelta/2))"
+   },
+   "pbz": {
+    "mode": "expression",
+    "value": "-op('tube1').par.height"
+   },
+   "stdswitcher": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "lineSOP",
+  "nodeX": 268,
+  "nodeY": -448,
+  "render": false,
+  "tags": []
+ },
+ "/light1/line4": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "pbx": {
+    "mode": "constant",
+    "value": 0.0
+   },
+   "pby": {
+    "mode": "expression",
+    "value": "mod.math.sin(-mod.math.radians(parent().par.coneangle/2)) - \tmod.math.sin(mod.math.radians(parent().par.conedelta/2))"
+   },
+   "pbz": {
+    "mode": "expression",
+    "value": "-op('tube1').par.height"
+   },
+   "stdswitcher": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "lineSOP",
+  "nodeX": 268,
+  "nodeY": -538,
+  "render": false,
+  "tags": []
+ },
+ "/light1/line5": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "paz": {
+    "mode": "expression",
+    "value": "-parent().par.attenuationstart"
+   },
+   "pbx": {
+    "mode": "constant",
+    "value": 0.0
+   },
+   "pbz": {
+    "mode": "expression",
+    "value": "-parent().par.attenuationend"
+   },
+   "stdswitcher": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "lineSOP",
+  "nodeX": 275,
+  "nodeY": -837,
+  "render": false,
+  "tags": []
+ },
+ "/light1/merge1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/light1/grid1",
+   "/light1/tube1",
+   "/light1/skin1",
+   "/light1/merge3",
+   "/light1/switch2"
+  ],
+  "json_parameters": {},
+  "json_type": "mergeSOP",
+  "nodeX": 805,
+  "nodeY": -144,
+  "render": false,
+  "tags": []
+ },
+ "/light1/merge2": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/light1/circle1",
+   "/light1/circle2"
+  ],
+  "json_parameters": {},
+  "json_type": "mergeSOP",
+  "nodeX": 476,
+  "nodeY": -141,
+  "render": false,
+  "tags": []
+ },
+ "/light1/merge3": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/light1/line1",
+   "/light1/line2",
+   "/light1/line3",
+   "/light1/line4"
+  ],
+  "json_parameters": {},
+  "json_type": "mergeSOP",
+  "nodeX": 468,
+  "nodeY": -369,
+  "render": false,
+  "tags": []
+ },
+ "/light1/merge4": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/light1/sphere1",
+   "/light1/transform1",
+   "/light1/transform2",
+   "/light1/switch3"
+  ],
+  "json_parameters": {},
+  "json_type": "mergeSOP",
+  "nodeX": 1298,
+  "nodeY": -335,
+  "render": false,
+  "tags": []
+ },
+ "/light1/merge5": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/light1/transform3",
+   "/light1/transform4",
+   "/light1/line5"
+  ],
+  "json_parameters": {},
+  "json_type": "mergeSOP",
+  "nodeX": 478,
+  "nodeY": -708,
+  "render": false,
+  "tags": []
+ },
+ "/light1/merge6": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/light1/circle4",
+   "/light1/circle5"
+  ],
+  "json_parameters": {},
+  "json_type": "mergeSOP",
+  "nodeX": 866,
+  "nodeY": -689,
+  "render": false,
+  "tags": []
+ },
+ "/light1/phong1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "diffb": {
+    "mode": "constant",
+    "value": 0.0
+   },
+   "diffg": {
+    "mode": "constant",
+    "value": 0.0
+   },
+   "diffr": {
+    "mode": "constant",
+    "value": 0.0
+   },
+   "emitb": {
+    "mode": "expression",
+    "value": "parent().par.cb"
+   },
+   "emitg": {
+    "mode": "expression",
+    "value": "parent().par.cg"
+   },
+   "emitr": {
+    "mode": "expression",
+    "value": "parent().par.cr"
+   },
+   "shininess": {
+    "mode": "constant",
+    "value": 88.0
+   },
+   "skelrootpath": {
+    "mode": "expression",
+    "value": "parent()"
+   },
+   "specb": {
+    "mode": "constant",
+    "value": 0.0
+   },
+   "specg": {
+    "mode": "constant",
+    "value": 0.0
+   },
+   "specr": {
+    "mode": "constant",
+    "value": 0.0
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "phongMAT",
+  "nodeX": 108,
+  "nodeY": 47,
+  "render": false,
+  "tags": []
+ },
+ "/light1/skin1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/light1/merge2"
+  ],
+  "json_parameters": {
+   "stdswitcher": {
+    "mode": "constant",
+    "value": 0
+   },
+   "surftype": {
+    "mode": "constant",
+    "value": "rowcol"
+   }
+  },
+  "json_type": "skinSOP",
+  "nodeX": 574,
+  "nodeY": -141,
+  "render": false,
+  "tags": []
+ },
+ "/light1/sphere1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "radx": {
+    "mode": "constant",
+    "value": 0.05000000074505806
+   },
+   "rady": {
+    "mode": "constant",
+    "value": 0.05000000074505806
+   },
+   "radz": {
+    "mode": "constant",
+    "value": 0.05000000074505806
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "sphereSOP",
+  "nodeX": 1052,
+  "nodeY": -332,
+  "render": false,
+  "tags": []
+ },
+ "/light1/switch1": {
+  "bypass": false,
+  "display": true,
+  "json_connections": [
+   "/light1/merge4",
+   "/light1/merge1"
+  ],
+  "json_parameters": {
+   "input": {
+    "mode": "expression",
+    "value": "parent().par.lighttype.menuIndex"
+   },
+   "stdswitcher": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "switchSOP",
+  "nodeX": 1478,
+  "nodeY": -216,
+  "render": true,
+  "tags": []
+ },
+ "/light1/switch2": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/light1/add1",
+   "/light1/merge5"
+  ],
+  "json_parameters": {
+   "input": {
+    "mode": "expression",
+    "value": "parent().par.attenuated"
+   },
+   "stdswitcher": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "switchSOP",
+  "nodeX": 601,
+  "nodeY": -658,
+  "render": false,
+  "tags": []
+ },
+ "/light1/switch3": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/light1/add1",
+   "/light1/copy1"
+  ],
+  "json_parameters": {
+   "input": {
+    "mode": "expression",
+    "value": "parent().par.attenuated"
+   },
+   "stdswitcher": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "switchSOP",
+  "nodeX": 1175,
+  "nodeY": -651,
+  "render": false,
+  "tags": []
+ },
+ "/light1/transform1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/light1/cross1"
+  ],
+  "json_parameters": {
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   },
+   "sx": {
+    "mode": "constant",
+    "value": 2.0
+   },
+   "sy": {
+    "mode": "constant",
+    "value": 2.0
+   },
+   "sz": {
+    "mode": "constant",
+    "value": 2.0
+   }
+  },
+  "json_type": "transformSOP",
+  "nodeX": 1045,
+  "nodeY": -434,
+  "render": false,
+  "tags": []
+ },
+ "/light1/transform2": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/light1/cross1"
+  ],
+  "json_parameters": {
+   "rx": {
+    "mode": "constant",
+    "value": -45.0
+   },
+   "rz": {
+    "mode": "constant",
+    "value": -45.0
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "transformSOP",
+  "nodeX": 1058,
+  "nodeY": -535,
+  "render": false,
+  "tags": []
+ },
+ "/light1/transform3": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/light1/circle3"
+  ],
+  "json_parameters": {
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   },
+   "tz": {
+    "mode": "expression",
+    "value": "-parent().par.attenuationstart"
+   }
+  },
+  "json_type": "transformSOP",
+  "nodeX": 276,
+  "nodeY": -642,
+  "render": false,
+  "tags": []
+ },
+ "/light1/transform4": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [
+   "/light1/circle3"
+  ],
+  "json_parameters": {
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   },
+   "tz": {
+    "mode": "expression",
+    "value": "-parent().par.attenuationend"
+   }
+  },
+  "json_type": "transformSOP",
+  "nodeX": 273,
+  "nodeY": -738,
+  "render": false,
+  "tags": []
+ },
+ "/light1/tube1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "height": {
+    "mode": "expression",
+    "value": "mod.math.cos(mod.math.radians(parent().par.coneangle/2))"
+   },
+   "orient": {
+    "mode": "constant",
+    "value": "z"
+   },
+   "rad1": {
+    "mode": "constant",
+    "value": 0.009999999776482582
+   },
+   "rad2": {
+    "mode": "expression",
+    "value": "mod.math.sin(mod.math.radians(parent().par.coneangle/2))"
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   },
+   "type": {
+    "mode": "constant",
+    "value": "prim"
+   },
+   "tz": {
+    "mode": "expression",
+    "value": "-me.par.height*0.5"
+   }
+  },
+  "json_type": "tubeSOP",
+  "nodeX": 409,
+  "nodeY": -31,
+  "render": false,
+  "tags": []
+ },
+ "/render1": {
+  "bypass": false,
+  "display": false,
+  "json_connections": [],
+  "json_parameters": {
+   "resmenu": {
+    "mode": "constant",
+    "value": 9
+   },
+   "resolutionh": {
+    "mode": "constant",
+    "value": 720
+   },
+   "resolutionw": {
+    "mode": "constant",
+    "value": 1280
+   },
+   "stdswitcher1": {
+    "mode": "constant",
+    "value": 0
+   }
+  },
+  "json_type": "renderTOP",
+  "nodeX": 1125,
+  "nodeY": 125,
+  "render": false,
+  "tags": []
+ }
+}
